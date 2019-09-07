@@ -25,7 +25,6 @@
     "npm": ">= 6.11.3"
   },
   "dependencies": {
-    "fastify": "^2.8.0",
     "firebase-admin": "^8.5.0"
   },
   "devDependencies": {

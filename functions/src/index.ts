@@ -27,5 +27,6 @@ exports.makeUppercase = functions.database.ref('/messages/{pushId}/original')
       // You must return a Promise when performing asynchronous tasks inside a Functions such as
       // writing to the Firebase Realtime Database.
       // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
-      return snapshot.ref.parent.child('uppercase').set(uppercase);
-    });index.js
+      if (snapshot.ref.parent) return snapshot.ref.parent.child('uppercase').set(uppercase);
+      return Promise.reject('snapshot.ref.parent is null');
+    });

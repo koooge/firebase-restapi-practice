@@ -18,6 +18,4 @@ usersRef.set({
     date_of_birth: "December 9, 1906",
     full_name: "Grace Hopper"
   }
-});
-
-// db.app.delete();
+}).then(() => db.app.delete());
